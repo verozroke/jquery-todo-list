@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body>
+    <div
+      class="overflow-x-hidden bg-slate-100 dark:text-zinc-300 dark:bg-zinc-900 flex flex-col items-center pt-40 min-h-screen w-full"
+    >
+      <h1 class="m-0 p-0 text-4xl font-bold mb-4">Simple Todo-List</h1>
+      <span class="min-w-md font-medium mb-2">Add Task:</span>
+      <div class="flex gap-2 min-w-md items-center mb-4">
+        <input
+          type="text"
+          id="task-input"
+          class="border-2 flex-1 border-slate-400 font-medium tracking-tight focus:border-slate-700 bg-slate-100 py-1 px-2 dark:bg-zinc-700 dark:border-zinc-800 rounded-md"
+        />
+        <button
+          id="task-button"
+          class="h-[36px] w-[36px] bg-sky-500 dark:bg-sky-700 text-slate-100 dark:text-zinc-300 rounded-md"
+        >
+          +
+        </button>
+      </div>
+      <span class="min-w-md font-medium mb-2">Search:</span>
+      <div class="flex gap-2 min-w-md items-center mb-4">
+        <input
+          type="text"
+          id="search-input"
+          class="border-2 flex-1 border-slate-400 font-medium tracking-tight focus:border-slate-700 bg-slate-100 py-1 px-2 rounded-md dark:bg-zinc-700 dark:border-zinc-800"
+        />
+        <button
+          id="search-button"
+          class="h-[36px] w-[36px] bg-sky-500 dark:bg-sky-700 text-slate-100 dark:text-zinc-300 rounded-md"
+        >
+          🔍
+        </button>
+      </div>
+
+      <div class="mb-4 min-w-md flex items-center gap-2">
+        <button
+          id="clear-tasks-button"
+          class="h-[36px] px-5 bg-sky-500 dark:bg-sky-700 text-slate-100 dark:text-zinc-300 rounded-md"
+        >
+          Очистить всё
+        </button>
+        <button
+          id="clear-doned-tasks-button"
+          class="h-[36px] px-5 bg-sky-500 dark:bg-sky-700 text-slate-100 dark:text-zinc-300 rounded-md"
+        >
+          Очистить все выполненные
+        </button>
+      </div>
+
+      <span
+        id="task-count"
+        class="min-w-md mb-4 leading-5 dark:text-zinc-300"
+      ></span>
+
+      <div
+        id="todo-list"
+        class="flex flex-col min-w-md max-w-md gap-2"
+      ></div>
+    </div>
+    <script src="src/state.js"></script>
+    <script src="src/utils.js"></script>
+    <script src="src/components.js"></script>
+    <script src="src/template.js"></script>
+    <script src="src/render.js"></script>
+    <script src="src/todo.js"></script>
+    <script src="src/search.js"></script>
+    <script src="src/app.js"></script>
+  </body>
+</html>
