@@ -41,10 +41,9 @@ function initAllEventListeners() {
     renderUserHistory(getUserHistory())
   })
 
-  $('#gemini-button').click((e) => {
-    const userPrompt = $('#gemini-input').val()
-    requestGemini(getGeminiPrompt(userPrompt), (output, err) =>
+  $('#gemini-button').click((e) =>
+    requestGemini(getGeminiPrompt($('#gemini-input').val()), (output, err) =>
       handleGeminiPrompt(output, err)
     )
-  })
+  )
 }
