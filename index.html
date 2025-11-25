@@ -8,12 +8,34 @@
     />
     <title>Document</title>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link
+      rel="stylesheet"
+      href="https://code.jquery.com/ui/1.14.1/themes/base/jquery-ui.css"
+    />
   </head>
   <body>
     <div
       class="overflow-x-hidden bg-slate-100 dark:text-zinc-300 dark:bg-zinc-900 flex flex-col items-center pt-40 min-h-screen w-full"
     >
+      <div
+        id="history-dialog"
+        title="hello world"
+        class="min-w-md"
+      >
+        <ul id="history-list"></ul>
+      </div>
+      <div
+        id="history-button"
+        class="absolute bottom-5 right-5 h-[64px] w-[64px] p-1 bg-sky-500 rounded-full flex items-center justify-center shadow-lg hover:shadow-none transition dark:bg-sky-700"
+      >
+        <img
+          src="./src/assets/history.png"
+          class="w-1/2 h-1/2 object-cover invert text-slate-100"
+          alt=""
+        />
+      </div>
       <h1 class="m-0 p-0 text-4xl font-bold mb-4">Simple Todo-List</h1>
       <span class="min-w-md font-medium mb-2">Add Task:</span>
       <div class="flex gap-2 min-w-md items-center mb-4">
@@ -66,9 +88,12 @@
 
       <div
         id="todo-list"
-        class="flex flex-col min-w-md max-w-md gap-2"
+        class="flex flex-col min-w-md max-w-md gap-2 max-h-[300px] rounded-md overflow-x-hidden overflow-y-scroll p-2 scroll-smooth"
       ></div>
     </div>
+    <script src="src/notifications.js"></script>
+    <script src="src/history.js"></script>
+    <script src="src/widgets.js"></script>
     <script src="src/state.js"></script>
     <script src="src/utils.js"></script>
     <script src="src/components.js"></script>
@@ -76,6 +101,7 @@
     <script src="src/render.js"></script>
     <script src="src/todo.js"></script>
     <script src="src/search.js"></script>
+    <script src="src/event-listeners.js"></script>
     <script src="src/app.js"></script>
   </body>
 </html>

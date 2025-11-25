@@ -21,3 +21,10 @@ function SingleTaskComponent(task) {
     </span>
   `
 }
+
+function SingleHistoryComponent(when, what, taskName = 'Все') {
+  return `
+    <li class="font-medium text-sm text-black dark:text-zinc-300">${when} - ${historyWhatMap[what]} - <u>${taskName}</u></li>
+  
+  `
+}
