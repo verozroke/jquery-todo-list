@@ -6,6 +6,13 @@ function debounce(callback, delay) {
   }
 }
 
+function cleanAIJson(str) {
+  return str
+    .replace(/```json/gi, '')
+    .replace(/```/g, '')
+    .trim()
+}
+
 function isEnterPressed(e) {
   return e.which === 13
 }

@@ -40,4 +40,11 @@ function initAllEventListeners() {
     openDialog('#history-dialog')
     renderUserHistory(getUserHistory())
   })
+
+  $('#gemini-button').click((e) => {
+    const userPrompt = $('#gemini-input').val()
+    requestGemini(getGeminiPrompt(userPrompt), (output, err) =>
+      handleGeminiPrompt(output, err)
+    )
+  })
 }

@@ -17,7 +17,7 @@
   </head>
   <body>
     <div
-      class="overflow-x-hidden bg-slate-100 dark:text-zinc-300 dark:bg-zinc-900 flex flex-col items-center pt-40 min-h-screen w-full"
+      class="overflow-x-hidden bg-slate-100 dark:text-zinc-300 dark:bg-zinc-900 flex flex-col items-center py-20 min-h-screen w-full"
     >
       <div
         id="history-dialog"
@@ -65,6 +65,20 @@
           🔍
         </button>
       </div>
+      <span class="min-w-md font-medium mb-2">AI Prompt:</span>
+      <div class="flex flex-col gap-2 min-w-md mb-8">
+        <textarea
+          type="text"
+          id="gemini-input"
+          class="border-2 flex-1 border-slate-400 font-medium tracking-tight focus:border-slate-700 bg-slate-100 py-1 px-2 rounded-md dark:bg-zinc-700 dark:border-zinc-800"
+        ></textarea>
+        <button
+          id="gemini-button"
+          class="h-[36px] w-full bg-sky-500 dark:bg-sky-700 text-slate-100 dark:text-zinc-300 rounded-md"
+        >
+          🪄 Сгенерировать задачи
+        </button>
+      </div>
 
       <div class="mb-4 min-w-md flex items-center gap-2">
         <button
@@ -92,6 +106,7 @@
       ></div>
     </div>
     <script src="src/notifications.js"></script>
+    <script src="src/gemini.js"></script>
     <script src="src/history.js"></script>
     <script src="src/widgets.js"></script>
     <script src="src/state.js"></script>
